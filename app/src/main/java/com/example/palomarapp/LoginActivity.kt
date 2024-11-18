@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var forgotPasswordText: TextView
     private lateinit var registerText: TextView
 
-    private val LOGIN_URL = "http://192.168.100.6/palomar_api/login.php" // Cambia localhost a tu IP si usas un dispositivo físico
+    private val LOGIN_URL = "http://192.168.100.2/palomar_api/login.php" // Cambia localhost a tu IP si usas un dispositivo físico
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
