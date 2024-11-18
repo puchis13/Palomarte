@@ -1,4 +1,5 @@
 package com.example.palomarapp
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
-
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
@@ -55,7 +55,6 @@ class LoginActivity : AppCompatActivity() {
         // Configurar el texto de "¿Olvidaste tu contraseña?"
         forgotPasswordText.setOnClickListener {
             Toast.makeText(this, "Funcionalidad de recuperación de contraseña no implementada", Toast.LENGTH_SHORT).show()
-            // Puedes redirigir a otra actividad para recuperación de contraseña si lo necesitas
         }
     }
 
@@ -73,7 +72,11 @@ class LoginActivity : AppCompatActivity() {
                 val success = response.getBoolean("success")
                 if (success) {
                     Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
-                    // Aquí puedes redirigir a la actividad principal de la aplicación después de un inicio de sesión exitoso
+
+                    // Redirigir a MainActivity después de un login exitoso
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // Opcional: Finaliza LoginActivity para que el usuario no pueda regresar con el botón de retroceso
                 } else {
                     Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
                 }

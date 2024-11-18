@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="sky_blue">#87CEEB</color>
     <color name="dark_blue">#00008B</color>
+    <color name="backgroundColor">#1E1E1E</color> <!-- Fondo oscuro elegante -->
+    <color name="accentColor">#FFC107</color> <!-- Amarillo vibrante para decoraciones -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="text_dark">#212121</color>
 </resources>
