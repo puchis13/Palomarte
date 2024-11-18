@@ -1,10 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReproduccionActivity">
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextIdReproduccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID de Reproducción"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextFechaCreacionNido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Creación del Nido"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/editTextNumeroNido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número del Nido"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextPalomaMadreId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID de la Paloma Madre"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextPalomaPadreId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID de la Paloma Padre"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextAnilloPichon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Anillo del Pichón"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextCantidadPichonesLogrados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad de Pichones Logrados"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado"
+            android:inputType="text" />
+
+        <!-- Botones CRUD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/createButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/updateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actualizar"
+                    android:layout_margin="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar"
+                    android:layout_margin="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
