@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         val videoView: VideoView = findViewById(R.id.videoView)
 
         // Establece la URI del video (puede ser un archivo local o una URL)
-        val videoUri = Uri.parse("android.resource://" + packageName + "/" + R.raw.intro_video)
-        videoView.setVideoURI(videoUri)
+        //val videoUri = Uri.parse("android.resource://" + packageName + "/" + R.raw.intro_video) videoView.setVideoURI(videoUri)
 
         // Inicia el video automáticamente
         videoView.setOnPreparedListener { it.isLooping = true } // Loopa el video
