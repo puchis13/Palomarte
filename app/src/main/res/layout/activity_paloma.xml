@@ -13,7 +13,7 @@
             android:id="@+id/aliasInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Alias"
+            android:hint="PENE"
             android:inputType="text" />
 
         <!-- Fecha de Nacimiento -->
