@@ -1,10 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PalomaActivity">
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Campo Alias -->
+        <EditText
+            android:id="@+id/aliasInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alias"
+            android:inputType="text" />
+
+        <!-- Fecha de Nacimiento -->
+        <EditText
+            android:id="@+id/fechaNacimientoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento"
+            android:inputType="date" />
+
+        <!-- Clasificación de Anillo -->
+        <EditText
+            android:id="@+id/clasificacionAnilloInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clasificación de Anillo"
+            android:inputType="text" />
+
+        <!-- Sexo -->
+        <EditText
+            android:id="@+id/sexoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sexo"
+            android:inputType="text" />
+
+        <!-- Color de Plumaje -->
+        <EditText
+            android:id="@+id/colorPlumajeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Color de Plumaje"
+            android:inputType="text" />
+
+        <!-- Madre ID -->
+        <EditText
+            android:id="@+id/madreIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Madre ID"
+            android:inputType="number" />
+
+        <!-- Padre ID -->
+        <EditText
+            android:id="@+id/padreIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Padre ID"
+            android:inputType="number" />
+
+        <!-- Raza -->
+        <EditText
+            android:id="@+id/razaInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Raza"
+            android:inputType="text" />
+
+        <!-- Capacidad de Vuelo -->
+        <EditText
+            android:id="@+id/capacidadVueloInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Capacidad de Vuelo"
+            android:inputType="text" />
+
+        <!-- Status -->
+        <EditText
+            android:id="@+id/statusInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Status"
+            android:inputType="text" />
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/createButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear" />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actualizar"
+                android:layout_marginStart="16dp" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
