@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- ID de Reproducción -->
         <EditText
             android:id="@+id/editTextIdReproduccion"
             android:layout_width="match_parent"
@@ -15,13 +16,16 @@
             android:hint="ID de Reproducción"
             android:inputType="number" />
 
+        <!-- Fecha de Creación del Nido -->
         <EditText
             android:id="@+id/editTextFechaCreacionNido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha de Creación del Nido"
-            android:inputType="date" />
+            android:focusable="false"
+            android:inputType="none" />
 
+        <!-- Número del Nido -->
         <EditText
             android:id="@+id/editTextNumeroNido"
             android:layout_width="match_parent"
@@ -29,6 +33,7 @@
             android:hint="Número del Nido"
             android:inputType="text" />
 
+        <!-- ID de la Paloma Madre -->
         <EditText
             android:id="@+id/editTextPalomaMadreId"
             android:layout_width="match_parent"
@@ -36,6 +41,7 @@
             android:hint="ID de la Paloma Madre"
             android:inputType="text" />
 
+        <!-- ID de la Paloma Padre -->
         <EditText
             android:id="@+id/editTextPalomaPadreId"
             android:layout_width="match_parent"
@@ -43,13 +49,15 @@
             android:hint="ID de la Paloma Padre"
             android:inputType="text" />
 
+        <!-- Anillo del Pichón -->
         <EditText
             android:id="@+id/editTextAnilloPichon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Anillo del Pichón"
-            android:inputType="text" />
+            android:inputType="number" />
 
+        <!-- Cantidad de Pichones Logrados -->
         <EditText
             android:id="@+id/editTextCantidadPichonesLogrados"
             android:layout_width="match_parent"
@@ -57,12 +65,30 @@
             android:hint="Cantidad de Pichones Logrados"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/editTextStatus"
-            android:layout_width="match_parent"
+        <!-- Estado -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Estado"
-            android:inputType="text" />
+            android:text="Estado"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioActivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activo" />
+
+            <RadioButton
+                android:id="@+id/radioInactivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inactivo" />
+        </RadioGroup>
 
         <!-- Botones CRUD -->
         <LinearLayout
@@ -72,6 +98,7 @@
             android:gravity="center"
             android:layout_marginTop="16dp">
 
+            <!-- Fila de Botones Crear y Actualizar -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -94,6 +121,7 @@
                     android:layout_margin="8dp" />
             </LinearLayout>
 
+            <!-- Fila de Botones Eliminar y Buscar -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
