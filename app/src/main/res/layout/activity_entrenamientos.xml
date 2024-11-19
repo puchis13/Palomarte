@@ -22,19 +22,37 @@
             android:hint="ID del Grupo"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/editTextClasificacionVuelo"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Clasificación del Vuelo"
-            android:inputType="text" />
+            android:text="Clasificación del Vuelo"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupClasificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioOrdinarias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordinarias" />
+
+            <RadioButton
+                android:id="@+id/radioDerbys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Derbys" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/editTextFechaEntrenamiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha de Entrenamiento"
-            android:inputType="date" />
+            android:focusable="false"
+            android:inputType="none" />
 
         <EditText
             android:id="@+id/editTextUbicacionSuelta"
@@ -55,14 +73,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Hora de la Suelta"
-            android:inputType="time" />
+            android:focusable="false"
+            android:inputType="none" />
 
         <EditText
             android:id="@+id/editTextHoraLlegada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Hora de Llegada"
-            android:inputType="time" />
+            android:focusable="false"
+            android:inputType="none" />
 
         <EditText
             android:id="@+id/editTextRanking"
@@ -71,14 +91,30 @@
             android:hint="Ranking"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/editTextStatus"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Estado"
-            android:inputType="text" />
+            android:text="Estado"
+            android:layout_marginTop="8dp" />
 
-        <!-- Botones CRUD -->
+        <RadioGroup
+            android:id="@+id/radioGroupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioCompletado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completado" />
+
+            <RadioButton
+                android:id="@+id/radioPendiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendiente" />
+        </RadioGroup>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

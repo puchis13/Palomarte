@@ -22,12 +22,14 @@
             android:hint="Nombre del Grupo"
             android:inputType="text" />
 
+        <!-- Campo Fecha de Creación con selector de fecha -->
         <EditText
             android:id="@+id/editTextFechaCreacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha de Creación"
-            android:inputType="date" />
+            android:inputType="none"
+            android:focusable="false" />
 
         <EditText
             android:id="@+id/editTextTotalPalomas"
@@ -36,19 +38,55 @@
             android:hint="Total de Palomas"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/editTextClasificacion"
-            android:layout_width="match_parent"
+        <!-- Campo Clasificación con RadioButtons -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Clasificación"
-            android:inputType="text" />
+            android:text="Clasificación"
+            android:layout_marginTop="8dp" />
 
-        <EditText
-            android:id="@+id/editTextStatus"
+        <RadioGroup
+            android:id="@+id/radioGroupClasificacion"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioOrdinarias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordinarias" />
+
+            <RadioButton
+                android:id="@+id/radioDerbys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Derbys" />
+        </RadioGroup>
+
+        <!-- Campo Status con RadioButtons -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Estado"
-            android:inputType="text" />
+            android:text="Status"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioActivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activo" />
+
+            <RadioButton
+                android:id="@+id/radioInactivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inactivo" />
+        </RadioGroup>
 
         <!-- Botones CRUD -->
         <LinearLayout
