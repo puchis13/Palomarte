@@ -18,11 +18,11 @@
         <!-- Logo o título de la aplicación -->
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/palomar" />
+            android:src="@drawable/palomaa" />
 
         <!-- Campo de usuario con estilo TextInputLayout -->
         <com.google.android.material.textfield.TextInputLayout

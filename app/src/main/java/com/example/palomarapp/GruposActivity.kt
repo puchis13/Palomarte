@@ -52,7 +52,7 @@ class GruposActivity : AppCompatActivity() {
                 "clasificacion" to clasificacion,
                 "status" to status
             )
-            sendHttpRequest("http://192.168.100.2/palomar/grupos.php", "POST", params) {
+            sendHttpRequest("http://172.16.100.52/palomar/grupos.php", "POST", params) {
                 Toast.makeText(this, "Grupo creado con éxito", Toast.LENGTH_LONG).show()
                 clearFields(idInput, nombreGrupoInput, fechaCreacionInput, totalPalomasInput)
                 clasificacionGroup.clearCheck()
@@ -71,7 +71,7 @@ class GruposActivity : AppCompatActivity() {
                 "clasificacion" to clasificacion,
                 "status" to status
             )
-            sendHttpRequest("http://192.168.100.2/palomar/grupos.php", "PUT", params) {
+            sendHttpRequest("http://172.16.100.52/palomar/grupos.php", "PUT", params) {
                 Toast.makeText(this, "Grupo actualizado con éxito", Toast.LENGTH_LONG).show()
                 clearFields(idInput, nombreGrupoInput, fechaCreacionInput, totalPalomasInput)
                 clasificacionGroup.clearCheck()
@@ -85,7 +85,7 @@ class GruposActivity : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, ingresa un ID válido", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            sendHttpRequest("http://192.168.100.2/palomar/grupos.php?id=$id", "GET", null) { response ->
+            sendHttpRequest("http://172.16.100.52/palomar/grupos.php?id=$id", "GET", null) { response ->
                 val grupo = JSONObject(response)
                 nombreGrupoInput.setText(grupo.getString("nombre_grupo"))
                 fechaCreacionInput.setText(grupo.getString("fecha_creacion_grupo"))
@@ -109,7 +109,7 @@ class GruposActivity : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, ingresa un ID válido", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            sendHttpRequest("http://192.168.100.2/palomar/grupos.php?id=$id", "DELETE", null) {
+            sendHttpRequest("http://172.16.100.52/palomar/grupos.php?id=$id", "DELETE", null) {
                 Toast.makeText(this, "Grupo eliminado con éxito", Toast.LENGTH_LONG).show()
                 clearFields(idInput, nombreGrupoInput, fechaCreacionInput, totalPalomasInput)
                 clasificacionGroup.clearCheck()

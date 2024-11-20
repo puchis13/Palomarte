@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonRegister: Button
-    private val REGISTER_URL = "http://192.168.100.2/palomar_api/register.php" // Cambia a tu IP si estás en un dispositivo físico
+    private val REGISTER_URL = "http://172.16.100.52/palomar_api/register.php" // Cambia a tu IP si estás en un dispositivo físico
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
