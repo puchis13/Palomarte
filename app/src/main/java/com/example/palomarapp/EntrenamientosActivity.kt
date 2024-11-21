@@ -54,7 +54,7 @@ class EntrenamientosActivity : AppCompatActivity() {
                 horaLlegadaInput, rankingInput, statusGroup
             )
             sendHttpRequest(
-                "http://172.16.100.52/palomar/entrenamientos.php",
+                "http://192.168.100.2/palomar/entrenamientos.php",
                 "POST",
                 params,
                 "Registro creado con éxito."
@@ -70,7 +70,7 @@ class EntrenamientosActivity : AppCompatActivity() {
                 horaLlegadaInput, rankingInput, statusGroup
             )
             sendHttpRequest(
-                "http://172.16.100.52/palomar/entrenamientos.php",
+                "http://192.168.100.2/palomar/entrenamientos.php",
                 "PUT",
                 params,
                 "Registro actualizado con éxito."
@@ -83,7 +83,7 @@ class EntrenamientosActivity : AppCompatActivity() {
             val id = idInput.text.toString()
             if (id.isNotEmpty()) {
                 sendHttpRequest(
-                    "http://172.16.100.52/palomar/entrenamientos.php?id=$id",
+                    "http://192.168.100.2/palomar/entrenamientos.php?id=$id",
                     "DELETE",
                     null,
                     "Registro eliminado con éxito."
@@ -99,7 +99,7 @@ class EntrenamientosActivity : AppCompatActivity() {
             val id = idInput.text.toString()
             if (id.isNotEmpty()) {
                 sendHttpRequest(
-                    "http://172.16.100.52/palomar/entrenamientos.php?id=$id",
+                    "http://192.168.100.2/palomar/entrenamientos.php?id=$id",
                     "GET",
                     null,
                     "Registro encontrado."

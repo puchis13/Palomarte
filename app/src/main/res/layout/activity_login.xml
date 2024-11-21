@@ -69,27 +69,8 @@
             app:cornerRadius="16dp" />
 
         <!-- Texto de "¿Olvidaste tu contraseña?" en color azul fuerte -->
-        <TextView
-            android:id="@+id/forgotPasswordText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Olvidaste tu contraseña?"
-            android:textColor="@color/dark_blue"
-            android:textSize="14sp"
-            android:layout_marginTop="16dp"
-            android:gravity="center" />
 
         <!-- Opción para registrarse si el usuario no tiene cuenta, en color azul fuerte -->
-        <TextView
-            android:id="@+id/registerText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿No tienes una cuenta? Regístrate"
-            android:textColor="@color/dark_blue"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp"
-            android:padding="8dp"
-            android:gravity="center" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

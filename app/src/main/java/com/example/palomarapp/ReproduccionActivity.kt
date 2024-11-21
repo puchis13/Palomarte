@@ -48,7 +48,7 @@ class ReproduccionActivity : AppCompatActivity() {
                 idInput, fechaCreacionInput, numeroNidoInput, madreIdInput,
                 padreIdInput, anilloPichonInput, cantidadPichonesInput, statusGroup
             )
-            sendHttpRequest("http://172.16.100.52/palomar/reproduccions.php", "POST", params) { response ->
+            sendHttpRequest("http://192.168.100.2/palomar/reproduccions.php", "POST", params) { response ->
                 if (response.has("success")) {
                     Toast.makeText(this, response.getString("success"), Toast.LENGTH_LONG).show()
                     clearFields()
@@ -63,7 +63,7 @@ class ReproduccionActivity : AppCompatActivity() {
                 idInput, fechaCreacionInput, numeroNidoInput, madreIdInput,
                 padreIdInput, anilloPichonInput, cantidadPichonesInput, statusGroup
             )
-            sendHttpRequest("http://172.16.100.52/palomar/reproduccions.php", "PUT", params) { response ->
+            sendHttpRequest("http://192.168.100.2/palomar/reproduccions.php", "PUT", params) { response ->
                 if (response.has("success")) {
                     Toast.makeText(this, response.getString("success"), Toast.LENGTH_LONG).show()
                     clearFields()
@@ -76,7 +76,7 @@ class ReproduccionActivity : AppCompatActivity() {
         deleteButton.setOnClickListener {
             val id = idInput.text.toString()
             if (id.isNotEmpty()) {
-                sendHttpRequest("http://172.16.100.52/palomar/reproduccions.php?id=$id", "DELETE", null) { response ->
+                sendHttpRequest("http://192.168.100.2/palomar/reproduccions.php?id=$id", "DELETE", null) { response ->
                     if (response.has("success")) {
                         Toast.makeText(this, response.getString("success"), Toast.LENGTH_LONG).show()
                         clearFields()
@@ -92,7 +92,7 @@ class ReproduccionActivity : AppCompatActivity() {
         searchButton.setOnClickListener {
             val id = idInput.text.toString()
             if (id.isNotEmpty()) {
-                sendHttpRequest("http://172.16.100.52/palomar/reproduccions.php?id=$id", "GET", null) { response ->
+                sendHttpRequest("http://192.168.100.2/palomar/reproduccions.php?id=$id", "GET", null) { response ->
                     if (response.has("success")) {
                         populateFields(response.getJSONObject("data"))
                         Toast.makeText(this, response.getString("success"), Toast.LENGTH_LONG).show()

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
@@ -16,23 +15,22 @@ import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
 
+    // Declaración de variables para vincular con los elementos del XML
     private lateinit var editTextUsername: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
-    private lateinit var forgotPasswordText: TextView
-    private lateinit var registerText: TextView
 
-    private val LOGIN_URL = "http://172.16.100.52/palomar_api/login.php" // Cambia localhost a tu IP si usas un dispositivo físico
+    // URL del endpoint PHP
+    private val LOGIN_URL = "http://192.168.100.2/palomar/login.php" // Cambia esto si usas una IP diferente
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        // Vincular variables con elementos del XML
         editTextUsername = findViewById(R.id.editTextUsername)
         editTextPassword = findViewById(R.id.editTextPassword)
         buttonLogin = findViewById(R.id.buttonLogin)
-        forgotPasswordText = findViewById(R.id.forgotPasswordText)
-        registerText = findViewById(R.id.registerText)
 
         // Configurar el botón de inicio de sesión
         buttonLogin.setOnClickListener {
@@ -45,46 +43,40 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Por favor ingresa usuario y contraseña", Toast.LENGTH_SHORT).show()
             }
         }
-
-        // Configurar el texto de registro para redirigir a la actividad de registro
-        registerText.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Configurar el texto de "¿Olvidaste tu contraseña?"
-        forgotPasswordText.setOnClickListener {
-            Toast.makeText(this, "Funcionalidad de recuperación de contraseña no implementada", Toast.LENGTH_SHORT).show()
-        }
     }
 
+    // Método para autenticar al usuario
     private fun loginUser(username: String, password: String) {
         val queue: RequestQueue = Volley.newRequestQueue(this)
 
+        // Parámetros de la solicitud
         val params = HashMap<String, String>()
         params["username"] = username
         params["password"] = password
 
         val jsonObject = JSONObject(params as Map<*, *>)
 
+        // Configuración de la solicitud HTTP POST
         val request = JsonObjectRequest(Request.Method.POST, LOGIN_URL, jsonObject,
             Response.Listener { response ->
                 val success = response.getBoolean("success")
                 if (success) {
                     Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
 
-                    // Redirigir a MainActivity después de un login exitoso
+                    // Redirigir al MainActivity después de un login exitoso
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    finish() // Opcional: Finaliza LoginActivity para que el usuario no pueda regresar con el botón de retroceso
+                    finish() // Finaliza LoginActivity para que no se pueda regresar
                 } else {
-                    Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                    val message = response.getString("message")
+                    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                 }
             },
             Response.ErrorListener {
-                Toast.makeText(this, "Error en la conexión", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error en la conexión al servidor", Toast.LENGTH_SHORT).show()
             })
 
+        // Agregar la solicitud a la cola
         queue.add(request)
     }
 }
