@@ -65,46 +65,64 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Clasificación de Anillo -->
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Clasificación de Anillo"
-            android:layout_marginBottom="16dp">
+            android:text="Clasificación de Anillo"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/clasificacionAnilloInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/clasificacionAnilloSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
 
         <!-- Sexo -->
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Sexo"
+            android:text="Sexo"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/sexoGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginBottom="16dp">
 
-            <AutoCompleteTextView
-                android:id="@+id/sexoInput"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/sexoMacho"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:text="Macho" />
+
+            <RadioButton
+                android:id="@+id/sexoHembra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hembra"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
 
         <!-- Color de Plumaje -->
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Color de Plumaje"
-            android:layout_marginBottom="16dp">
+            android:text="Color de Plumaje"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/colorPlumajeInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/colorPlumajeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
 
         <!-- Madre ID -->
         <com.google.android.material.textfield.TextInputLayout
@@ -149,69 +167,134 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Capacidad de Vuelo -->
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Capacidad de Vuelo"
-            android:layout_marginBottom="16dp">
+            android:text="Capacidad de Vuelo"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/capacidadVueloInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/capacidadVueloSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
 
         <!-- Status -->
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Status"
-            android:layout_marginBottom="16dp">
+            android:text="Status"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
 
-            <AutoCompleteTextView
-                android:id="@+id/statusInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Botones -->
-        <LinearLayout
+        <RadioGroup
+            android:id="@+id/statusGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/statusActivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activo" />
+
+            <RadioButton
+                android:id="@+id/statusInactivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inactivo"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <!-- Fotografía -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fotografía"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/palomo"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/takePhotoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar Foto"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/selectPhotoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Foto de Galería"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botones CRUD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp">
 
-            <Button
-                android:id="@+id/createButton"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Crear"
-                android:backgroundTint="@color/sky_blue"
-                android:textColor="@android:color/white"
-                android:layout_marginEnd="8dp"
-                android:padding="8dp" />
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            <Button
-                android:id="@+id/updateButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Actualizar"
-                android:backgroundTint="@color/sky_blue"
-                android:textColor="@android:color/white"
-                android:layout_marginEnd="8dp"
-                android:padding="8dp" />
+                <Button
+                    android:id="@+id/createButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Crear"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:id="@+id/deleteButton"
-                android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/updateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Actualizar"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Eliminar"
-                android:backgroundTint="@color/sky_blue"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Eliminar"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/viewPalomasButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Palomas"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

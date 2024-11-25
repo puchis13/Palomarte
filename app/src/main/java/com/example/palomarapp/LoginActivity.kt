@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var buttonLogin: Button
 
     // URL del endpoint PHP
-    private val LOGIN_URL = "http://192.168.100.2/palomar/login.php" // Cambia esto si usas una IP diferente
+    private val LOGIN_URL = "http://192.168.100.6/palomar_api/login.php" // Cambia esto si usas una IP diferente
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,10 +63,17 @@ class LoginActivity : AppCompatActivity() {
                 if (success) {
                     Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
 
-                    // Redirigir al MainActivity después de un login exitoso
+                    // Obtener datos del usuario de la respuesta
+                    val user = response.getJSONObject("user")
+                    val userName = user.getString("name")
+                    val userEmail = user.getString("email")
+
+                    // Redirigir a UserDetailsActivity con los datos del usuario
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("userName", userName) // Pasamos el nombre
+                    intent.putExtra("userEmail", userEmail) // Pasamos el correo
                     startActivity(intent)
-                    finish() // Finaliza LoginActivity para que no se pueda regresar
+                    finish() // Finaliza LoginActivity
                 } else {
                     val message = response.getString("message")
                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
