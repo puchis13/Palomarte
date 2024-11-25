@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Fotografía -->
+    <ImageView
+        android:id="@+id/fotografiaImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+    android:adjustViewBounds="true"
+    android:layout_marginBottom="16dp"
+    android:background="@color/background_light" />
+
+    <!-- Alias -->
+    <TextView
+        android:id="@+id/aliasTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alias:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Fecha de Nacimiento -->
+    <TextView
+        android:id="@+id/fechaNacimientoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Nacimiento:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Clasificación del Anillo -->
+    <TextView
+        android:id="@+id/clasificacionAnilloTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clasificación del Anillo:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Sexo -->
+    <TextView
+        android:id="@+id/sexoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sexo:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Color de Plumaje -->
+    <TextView
+        android:id="@+id/colorPlumajeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Color de Plumaje:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Madre ID -->
+    <TextView
+        android:id="@+id/madreIdTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Madre ID:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Padre ID -->
+    <TextView
+        android:id="@+id/padreIdTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Padre ID:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Raza -->
+    <TextView
+        android:id="@+id/razaTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raza:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Capacidad de Vuelo -->
+    <TextView
+        android:id="@+id/capacidadVueloTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capacidad de Vuelo:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+</LinearLayout>
