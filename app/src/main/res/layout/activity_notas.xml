@@ -1,0 +1,122 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:id="@+id/notasTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Notas"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo para el título de la nota -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/tituloInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe el título de la nota"
+            android:layout_marginBottom="16dp"
+            android:inputType="text" />
+
+        <!-- Campo para el contenido de la nota -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contenido:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/contenidoInput"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Escribe el contenido de la nota"
+            android:gravity="top"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textMultiLine" />
+
+        <!-- Selector de prioridad -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prioridad:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/prioridadSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Selector de fecha -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/fechaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Fecha"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/fechaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha: No seleccionada"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón para guardar -->
+        <Button
+            android:id="@+id/guardarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Nota"
+            android:background="@color/sky_blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Lista de notas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notas Guardadas:"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/notasListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

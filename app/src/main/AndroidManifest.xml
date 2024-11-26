@@ -18,6 +18,9 @@
         android:theme="@style/Theme.PalomarApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".NotasActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserDetailsActivity"
             android:exported="false" />
         <activity
