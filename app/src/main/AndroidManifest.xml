@@ -18,6 +18,9 @@
         android:theme="@style/Theme.PalomarApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ListaConsumibles"
+            android:exported="false" />
+        <activity
             android:name=".AgregarCompetenciasActivity"
             android:exported="false" />
         <activity

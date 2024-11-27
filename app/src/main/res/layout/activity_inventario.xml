@@ -1,10 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InventarioActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- EditText para ID (solo lectura) -->
+    <EditText
+        android:id="@+id/editTextIdConsumible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID Consumible"
+        android:inputType="number"
+        android:enabled="false"
+        android:textColor="#4CAF50" /> <!-- Color verde para distinguir como no editable -->
+
+    <!-- EditText para Nombre -->
+    <EditText
+        android:id="@+id/editTextNombreConsumible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:textColor="#000000" />
+
+    <!-- EditText para Descripción -->
+    <EditText
+        android:id="@+id/editTextDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:textColor="#000000" />
+
+    <!-- EditText para Cantidad -->
+    <EditText
+        android:id="@+id/editTextCantidadConsumible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:textColor="#000000" />
+
+    <!-- EditText para Tipo -->
+    <EditText
+        android:id="@+id/editTextTipoConsumible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo"
+        android:textColor="#000000" />
+
+    <!-- ImageView para mostrar la foto del consumible -->
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/edit_text_background"
+        android:contentDescription="Imagen del consumible"/>
+
+    <!-- Botón para seleccionar la foto -->
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomar Foto"
+        android:layout_gravity="center" />
+
+    <!-- Botones de acción -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/viewListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Lista"
+        android:layout_gravity="center" />
+</LinearLayout>
