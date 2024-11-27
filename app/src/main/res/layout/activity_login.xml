@@ -22,7 +22,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/palomaa" />
+            android:src="@drawable/palomo" />
 
         <!-- Campo de usuario con estilo TextInputLayout -->
         <com.google.android.material.textfield.TextInputLayout

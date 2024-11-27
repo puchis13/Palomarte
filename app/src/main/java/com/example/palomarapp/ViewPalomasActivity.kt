@@ -19,7 +19,7 @@ class ViewPalomasActivity : AppCompatActivity() {
     private lateinit var noDataTextView: TextView
 
     // URL para obtener las palomas
-    private val getPalomasUrl = "http://192.168.100.2/palomar_api/get_palomas.php"
+    private val getPalomasUrl = "http://192.168.100.6/palomar_api/get_palomas.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,7 +126,7 @@ class ViewPalomasActivity : AppCompatActivity() {
 
         // Procesar y mostrar la fotografía desde la ruta almacenada
         if (fotografia.isNotEmpty()) {
-            val imageUrl = "http://192.168.100.2/palomar_api/$fotografia"
+            val imageUrl = "http://192.168.100.6/palomar_api/$fotografia"
             Glide.with(this)
                 .load(imageUrl)
                 .placeholder(R.drawable.loading) // Imagen de carga

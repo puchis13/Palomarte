@@ -2,6 +2,7 @@ package com.example.palomarapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +18,7 @@ class CompetenciasActivity : AppCompatActivity() {
     private lateinit var competenciasAdapter: CompetenciasAdapter
     private lateinit var fabAddCompetencia: FloatingActionButton
 
-    private val GET_COMPETENCIAS_URL = "http://192.168.100.2/palomar_api/competencias.php"
+    private val GET_COMPETENCIAS_URL = "http://192.168.100.6/palomar_api/get_competencias.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,12 +44,23 @@ class CompetenciasActivity : AppCompatActivity() {
 
         val jsonArrayRequest = JsonArrayRequest(Request.Method.GET, GET_COMPETENCIAS_URL, null,
             { response ->
+                // Depuración para ver el JSON
+                Log.d("Competencias", "JSON Response: $response")
+
                 val competencias = ArrayList<Competencia>()
                 for (i in 0 until response.length()) {
                     val jsonObject = response.getJSONObject(i)
+
+                    // Verificación de existencia de "grupo_id" antes de acceder a él
+                    val grupoId = if (jsonObject.has("grupo_id") && !jsonObject.isNull("grupo_id")) {
+                        jsonObject.getInt("grupo_id")
+                    } else {
+                        0 // O un valor predeterminado si "grupo_id" no está presente
+                    }
+
                     competencias.add(
                         Competencia(
-                            grupoId = jsonObject.getInt("grupo_id"),  // Añadido el campo grupo_id
+                            grupoId = grupoId,
                             nombreClub = jsonObject.getString("nombre_club"),
                             clasificacionVuelo = jsonObject.getString("clasificacion_vuelo"),
                             ubicacionSuelta = jsonObject.getString("ubicacion_suelta"),

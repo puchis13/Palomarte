@@ -23,7 +23,7 @@ class AgregarCompetenciasActivity : AppCompatActivity() {
     private var fechaSeleccionada: String = ""
     private var horaSeleccionada: String = ""
 
-    private val ADD_COMPETENCIA_URL = "http://192.168.100.2/palomar_api/insertar_competencia.php"
+    private val ADD_COMPETENCIA_URL = "http://192.168.100.6/palomar_api/add_competencia.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

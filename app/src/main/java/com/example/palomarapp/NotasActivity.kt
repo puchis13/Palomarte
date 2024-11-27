@@ -27,8 +27,8 @@ class NotasActivity : AppCompatActivity() {
     private var selectedDate: String? = null // Fecha seleccionada por el usuario
 
     // URL de la API
-    private val GET_NOTAS_URL = "http://192.168.100.2/palomar_api/get_notas.php"
-    private val POST_NOTAS_URL = "http://192.168.100.2/palomar_api/add_nota.php"
+    private val GET_NOTAS_URL = "http://192.168.100.6/palomar_api/get_notas.php"
+    private val POST_NOTAS_URL = "http://192.168.100.6/palomar_api/add_nota.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
