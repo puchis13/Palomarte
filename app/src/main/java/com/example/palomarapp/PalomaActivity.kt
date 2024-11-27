@@ -46,9 +46,9 @@ class PalomaActivity : AppCompatActivity() {
     private var photoBase64: String? = null
 
     // URLs del servidor
-    private val insertUrl = "http://192.168.100.6/palomar_api/insert_paloma.php"
-    private val updateUrl = "http://192.168.100.6/palomar_api/update_paloma.php"
-    private val deleteUrl = "http://192.168.100.6/palomar_api/delete_paloma.php"
+    private val insertUrl = "http://192.168.100.2/palomar_api/insert_paloma.php"
+    private val updateUrl = "http://192.168.100.2/palomar_api/update_paloma.php"
+    private val deleteUrl = "http://192.168.100.2/palomar_api/delete_paloma.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -21,6 +21,12 @@
             android:name=".AgregarCompetenciasActivity"
             android:exported="false" />
         <activity
+            android:name=".ListaNidos"
+            android:exported="false" />
+        <activity
+            android:name=".ListaGrupos"
+            android:exported="false" />
+        <activity
             android:name=".NotasActivity"
             android:exported="false" />
         <activity

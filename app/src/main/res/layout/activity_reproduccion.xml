@@ -8,23 +8,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- ID de Reproducción -->
-        <EditText
-            android:id="@+id/editTextIdReproduccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ID de Reproducción"
-            android:inputType="number" />
-
-        <!-- Fecha de Creación del Nido -->
-        <EditText
-            android:id="@+id/editTextFechaCreacionNido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Fecha de Creación del Nido"
-            android:focusable="false"
-            android:inputType="none" />
-
         <!-- Número del Nido -->
         <EditText
             android:id="@+id/editTextNumeroNido"
@@ -49,13 +32,22 @@
             android:hint="ID de la Paloma Padre"
             android:inputType="text" />
 
-        <!-- Anillo del Pichón -->
+        <!-- Fecha de Creación del Nido -->
         <EditText
-            android:id="@+id/editTextAnilloPichon"
+            android:id="@+id/editTextFechaCreacionNido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Anillo del Pichón"
-            android:inputType="number" />
+            android:hint="Fecha de Creación del Nido"
+            android:focusable="false"
+            android:inputType="none" />
+
+        <!-- Anillos de los Pichones -->
+        <EditText
+            android:id="@+id/editTextAnillosPichones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Anillos de los Pichones"
+            android:inputType="textMultiLine" />
 
         <!-- Cantidad de Pichones Logrados -->
         <EditText
@@ -141,6 +133,14 @@
                     android:layout_height="wrap_content"
                     android:text="Buscar"
                     android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/verListaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver lista"
+                    android:layout_margin="8dp" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -22,7 +22,6 @@
             android:hint="Nombre del Grupo"
             android:inputType="text" />
 
-        <!-- Campo Fecha de Creación con selector de fecha -->
         <EditText
             android:id="@+id/editTextFechaCreacion"
             android:layout_width="match_parent"
@@ -38,7 +37,6 @@
             android:hint="Total de Palomas"
             android:inputType="number" />
 
-        <!-- Campo Clasificación con RadioButtons -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +61,6 @@
                 android:text="Derbys" />
         </RadioGroup>
 
-        <!-- Campo Status con RadioButtons -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,7 +85,6 @@
                 android:text="Inactivo" />
         </RadioGroup>
 
-        <!-- Botones CRUD -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -136,6 +132,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Buscar"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver lista"
                     android:layout_margin="8dp" />
             </LinearLayout>
         </LinearLayout>

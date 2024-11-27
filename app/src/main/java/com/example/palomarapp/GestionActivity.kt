@@ -15,12 +15,12 @@ class GestionActivity : AppCompatActivity() {
         // Lista de opciones del menú
         val menuItems = listOf(
             MenuItem("Paloma", R.drawable.ic_pigeon, PalomaActivity::class.java),
-            MenuItem("Reproducción", R.drawable.ic_reproduction, ReproduccionActivity::class.java),
+            MenuItem("Nidos", R.drawable.ic_reproduction, ReproduccionActivity::class.java),
             MenuItem("Grupos", R.drawable.ic_groups, GruposActivity::class.java),
             MenuItem("Entrenamientos", R.drawable.ic_training, EntrenamientosActivity::class.java),
             MenuItem("Competencias", R.drawable.ic_competitions, CompetenciasActivity::class.java),
             MenuItem("Expediente Médico", R.drawable.ic_medical_record, ExpedienteMedicoActivity::class.java),
-            MenuItem("Inventario", R.drawable.ic_inventory, InventarioActivity::class.java),
+            MenuItem("Consumibles", R.drawable.ic_inventory, InventarioActivity::class.java),
             MenuItem("Notas", R.drawable.ic_notas, NotasActivity::class.java)
         )
 

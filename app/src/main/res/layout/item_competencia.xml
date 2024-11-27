@@ -1,53 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="8dp">
+    android:layout_margin="8dp">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/tvNombreClub"
-            android:layout_width="wrap_content"
+            android:id="@+id/competenciaNombre"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Nombre Club" />
+            android:text="Nombre del Club"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvClasificacionVuelo"
-            android:layout_width="wrap_content"
+            android:id="@+id/competenciaClasificacion"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clasificación Vuelo"
-            android:textSize="14sp" />
+            android:text="Clasificación"
+            android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/tvUbicacionSuelta"
-            android:layout_width="wrap_content"
+            android:id="@+id/competenciaUbicacion"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ubicación Suelta"
-            android:textSize="14sp" />
+            android:text="Ubicación"
+            android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/tvFechaCompetencia"
-            android:layout_width="wrap_content"
+            android:id="@+id/competenciaFecha"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fecha Competencia"
-            android:textSize="14sp" />
+            android:text="Fecha"
+            android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="wrap_content"
+            android:id="@+id/competenciaKilometros"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Status"
-            android:textSize="14sp"
-            android:textColor="@color/sky_blue" />
-
+            android:text="Kilómetros"
+            android:layout_marginTop="4dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

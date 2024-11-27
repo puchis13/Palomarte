@@ -1,6 +1,5 @@
 package com.example.palomarapp
 
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +21,7 @@ class CompetenciasAdapter(private var competencias: List<Competencia>) :
         holder.clasificacionVuelo.text = competencia.clasificacionVuelo
         holder.ubicacionSuelta.text = competencia.ubicacionSuelta
         holder.fechaCompetencia.text = competencia.fechaCompetencia
-        holder.status.text = competencia.status
+        holder.kilometros.text = competencia.kilometros.toString()
     }
 
     override fun getItemCount(): Int = competencias.size
@@ -33,10 +32,10 @@ class CompetenciasAdapter(private var competencias: List<Competencia>) :
     }
 
     class CompetenciaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nombreClub: TextView = itemView.findViewById(R.id.tvNombreClub)
-        val clasificacionVuelo: TextView = itemView.findViewById(R.id.tvClasificacionVuelo)
-        val ubicacionSuelta: TextView = itemView.findViewById(R.id.tvUbicacionSuelta)
-        val fechaCompetencia: TextView = itemView.findViewById(R.id.tvFechaCompetencia)
-        val status: TextView = itemView.findViewById(R.id.tvStatus)
+        val nombreClub: TextView = itemView.findViewById(R.id.competenciaNombre)
+        val clasificacionVuelo: TextView = itemView.findViewById(R.id.competenciaClasificacion)
+        val ubicacionSuelta: TextView = itemView.findViewById(R.id.competenciaUbicacion)
+        val fechaCompetencia: TextView = itemView.findViewById(R.id.competenciaFecha)
+        val kilometros: TextView = itemView.findViewById(R.id.competenciaKilometros)
     }
 }

@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var buttonLogin: Button
 
     // URL del endpoint PHP
-    private val LOGIN_URL = "http://192.168.100.6/palomar_api/login.php" // Cambia esto si usas una IP diferente
+    private val LOGIN_URL = "http://192.168.100.2/palomar_api/login.php" // Cambia esto si usas una IP diferente
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
